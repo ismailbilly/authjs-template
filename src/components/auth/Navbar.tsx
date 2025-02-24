@@ -39,7 +39,7 @@ export default async function Navbar() {
                 </li>
                 {session.user?.role === "admin" ? (
                   <li>
-                    <Link href="/user">User</Link>
+                    <Link href="/users">User</Link>
                   </li>
                 ) : null}
               </>
