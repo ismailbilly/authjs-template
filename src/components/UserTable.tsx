@@ -1,4 +1,5 @@
 import { getUsers } from '@/lib/data';
+import { formatDate } from '@/lib/utils';
 import React from 'react'
 
 const UserTable = async () => {
@@ -20,7 +21,8 @@ const UserTable = async () => {
                     <tr key={user.id}>
                         <td className="py-3 px-6">{user.name}</td>
                         <td className="py-3 px-6">{user.email}</td>
-                        <td className="py-3 px-6">{user.role}</td>
+                      <td className="py-3 px-6">{user.role}</td>
+                      <td className="py-3 px-6">{formatDate(user.createdAt.toString())}</td>
                       
                     </tr>
                 ))} 
